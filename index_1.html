@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>As Agreed Group | Virtual Back Office, Done As Agreed</title>
+<meta name="description" content="Bookkeeping, payroll, IT support and administration for growing businesses. No scope creep, no surprises. Just what was agreed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #10131F;
+    --ink-soft: #1B2032;
+    --paper: #FAF9F6;
+    --paper-dim: #F0EEE8;
+    --stamp: #D6402C;
+    --stamp-dark: #A82F1F;
+    --ledger: #1F7A5C;
+    --slate: #5C6272;
+    --line: rgba(16,19,31,0.14);
+    --line-on-ink: rgba(250,249,246,0.16);
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--body);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- NAV ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250,249,246,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .logo {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .dot { color: var(--stamp); }
+  .navlinks {
+    display: flex;
+    gap: 32px;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .navlinks a { text-decoration: none; opacity: 0.75; transition: opacity 0.15s; }
+  .navlinks a:hover { opacity: 1; }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 18px;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  @media (max-width: 720px) {
+    .navlinks { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ledger);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    opacity: 0;
+    animation: rise 0.6s 0.05s ease forwards;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 7px; height: 7px;
+    background: var(--ledger);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 4.6vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+    opacity: 0;
+    animation: rise 0.7s 0.15s ease forwards;
+  }
+  h1 em {
+    font-style: normal;
+    color: var(--stamp);
+  }
+  .hero p.sub {
+    font-size: 1.08rem;
+    color: var(--slate);
+    max-width: 46ch;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: rise 0.7s 0.25s ease forwards;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: rise 0.7s 0.35s ease forwards;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.15s ease;
+  }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-secondary {
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+    border-bottom: 2px solid var(--line);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* the stamp signature element */
+  .stamp {
+    width: 210px;
+    height: 210px;
+    border: 3px solid var(--stamp);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    color: var(--stamp);
+    font-family: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-align: center;
+    position: relative;
+    transform: rotate(-8deg) scale(0.85);
+    opacity: 0;
+    animation: stamp-in 0.5s 0.6s cubic-bezier(.2,1.5,.4,1) forwards;
+  }
+  .stamp::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px solid var(--stamp);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  .stamp span { font-size: 0.82rem; line-height: 1.5; font-weight: 700; }
+  @keyframes stamp-in {
+    to { opacity: 1; transform: rotate(-8deg) scale(1); }
+  }
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .stamp { justify-self: start; margin-top: 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .eyebrow, h1, .hero p.sub, .hero-ctas, .stamp { animation: none; opacity: 1; }
+    .stamp { transform: rotate(-8deg) scale(1); }
+  }
+
+  /* ---------- SECTION SHARED ---------- */
+  section { padding: 88px 0; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    letter-spacing: -0.01em;
+  }
+  .section-note {
+    font-size: 0.95rem;
+    color: var(--slate);
+    max-width: 36ch;
+  }
+
+  /* ---------- SERVICES (ledger rows) ---------- */
+  .ledger {
+    border-top: 1px solid var(--line);
+  }
+  .ledger-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr;
+    gap: 24px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .ledger-row .num {
+    font-family: var(--mono);
+    color: var(--ledger);
+    font-size: 0.85rem;
+  }
+  .ledger-row h3 {
+    font-family: var(--display);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .ledger-row p {
+    color: var(--slate);
+    font-size: 0.95rem;
+  }
+  @media (max-width: 720px) {
+    .ledger-row { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process-band {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .process-band h2 { color: var(--paper); }
+  .process-band .section-note { color: rgba(250,249,246,0.65); }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line-on-ink);
+    border: 1px solid var(--line-on-ink);
+  }
+  .process-card {
+    background: var(--ink);
+    padding: 32px 28px;
+  }
+  .process-card .step {
+    font-family: var(--mono);
+    color: var(--stamp);
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+  }
+  .process-card h3 {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .process-card p {
+    color: rgba(250,249,246,0.68);
+    font-size: 0.92rem;
+  }
+  @media (max-width: 720px) {
+    .process-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact {
+    background: var(--paper-dim);
+    text-align: center;
+    padding: 100px 0;
+  }
+  .contact h2 { margin-bottom: 16px; }
+  .contact p.sub {
+    color: var(--slate);
+    max-width: 40ch;
+    margin: 0 auto 32px;
+  }
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0;
+    font-size: 0.82rem;
+    color: var(--slate);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">As Agreed<span class="dot">.</span></div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+    </div>
+    <a class="nav-cta" href="mailto:info@asagreed.au">Book a call</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Launching Gold Coast, Feb 2027</div>
+      <h1>Back office support, <em>as agreed</em> and nothing more.</h1>
+      <p class="sub">A virtual back office covering bookkeeping, payroll, IT support and administration. You get a fixed scope and a fixed monthly price, and we stick to both.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="mailto:info@asagreed.au">Book a call</a>
+        <a class="btn-secondary" href="#services">Learn more</a>
+      </div>
+    </div>
+    <div class="stamp"><span>Agreed<br>&amp;<br>Delivered</span></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What we cover</h2>
+      <p class="section-note">Four services, one point of contact, and a scope set out before we start.</p>
+    </div>
+    <div class="ledger">
+      <div class="ledger-row">
+        <div class="num">01</div>
+        <h3>Bookkeeping</h3>
+        <p>Reconciliations, accounts payable and receivable, and monthly reporting.</p>
+      </div>
+      <div class="ledger-row">
+        <div class="num">02</div>
+        <h3>Payroll</h3>
+        <p>Pay runs, leave balances and compliance, processed on schedule each cycle.</p>
+      </div>
+      <div class="ledger-row">
+        <div class="num">03</div>
+        <h3>IT support</h3>
+        <p>A point of contact for IT issues, logged and followed through to resolution.</p>
+      </div>
+      <div class="ledger-row">
+        <div class="num">04</div>
+        <h3>Administration</h3>
+        <p>Inbox management, scheduling and document handling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process-band">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+      <p class="section-note">Three steps to get set up, and a fixed agreement in writing.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="step">Step 1</div>
+        <h3>Scope the agreement</h3>
+        <p>A call to work out what needs covering and what the finished result looks like.</p>
+      </div>
+      <div class="process-card">
+        <div class="step">Step 2</div>
+        <h3>Sign off</h3>
+        <p>A one-page agreement in plain English, with a fixed monthly price and fixed scope.</p>
+      </div>
+      <div class="process-card">
+        <div class="step">Step 3</div>
+        <h3>We run it</h3>
+        <p>The work runs in the background each month, to the scope we agreed on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p class="sub">Tell us what needs covering. We'll scope it, price it, and put it in writing.</p>
+    <a class="btn-primary" href="mailto:info@asagreed.au">info@asagreed.au</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>&copy; 2026 As Agreed Group</span>
+  <span>Gold Coast, Australia (from Feb 2027)</span>
+</footer>
+
+</body>
+</html>
