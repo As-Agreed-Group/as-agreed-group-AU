@@ -13,6 +13,9 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+timezone: Australia/Brisbane
+future: true
+
 permalink: /blog/:title/
 
 plugins:
