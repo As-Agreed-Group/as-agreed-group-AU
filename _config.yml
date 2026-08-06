@@ -21,6 +21,7 @@ permalink: /blog/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
   style: compressed
