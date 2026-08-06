@@ -2,6 +2,7 @@
 layout: post
 title: "Why your startup needs an operations partner, not just a bookkeeper"
 date: 2026-08-07
+published: false
 description: >-
   A bookkeeper keeps your numbers straight. An operations partner runs the
   whole back office and tells you where the business is leaking time and
