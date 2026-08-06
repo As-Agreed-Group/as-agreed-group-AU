@@ -1,0 +1,31 @@
+title: As Agreed Group
+description: >-
+  Bookkeeping, payroll, IT support and administration for growing businesses
+  on the Gold Coast. Fixed scope, fixed monthly price.
+url: "https://asagreed.au"
+baseurl: ""
+lang: en-AU
+
+author: As Agreed Group
+email: info@asagreed.au
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - NOTES.md
+  - node_modules
+  - vendor

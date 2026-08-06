@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#FAF9F6"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#D6402C" stroke-width="4"/>
+  <circle cx="32" cy="32" r="19" fill="none" stroke="#D6402C" stroke-width="1.5" opacity="0.55"/>
+  <text x="32" y="39" text-anchor="middle" font-family="'Space Grotesk', Arial, sans-serif" font-weight="700" font-size="22" fill="#D6402C">AA</text>
+</svg>

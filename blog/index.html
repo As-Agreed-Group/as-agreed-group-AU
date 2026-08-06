@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+description: >-
+  Practical notes on outsourced admin, bookkeeping and running a lean back
+  office, from the team at As Agreed.
+permalink: /blog/
+---
+
+<section class="blog-hero">
+  <div class="wrap">
+    <div class="eyebrow">Blog</div>
+    <h1>Notes from the back office.</h1>
+    <p class="sub">Practical thinking on admin, operations and running a lean business, from the team at As Agreed.</p>
+  </div>
+</section>
+
+<section id="posts">
+  <div class="wrap">
+    {% if site.posts.size > 0 %}
+    <div class="post-list">
+      {% for post in site.posts %}
+      <a class="post-row" href="{{ post.url | relative_url }}">
+        <div class="post-date">{{ post.date | date: "%d %b %Y" }}</div>
+        <div class="post-info">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 28 }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="section-note">No posts yet. Check back soon.</p>
+    {% endif %}
+  </div>
+</section>

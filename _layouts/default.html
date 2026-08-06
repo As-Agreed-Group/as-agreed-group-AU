@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+
+{% seo %}
+{% feed_meta %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "As Agreed Group",
+  "url": "https://asagreed.au/",
+  "email": "info@asagreed.au",
+  "description": "Virtual back office services covering bookkeeping, payroll, IT support and administration for businesses on the Gold Coast, Australia.",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Gold Coast, Australia"
+  },
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bookkeeping" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Payroll" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IT support" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Administration" } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="{{ '/' | relative_url }}">As Agreed<span class="dot">.</span></a>
+    <div class="navlinks">
+      <a href="{{ '/#services' | relative_url }}">Services</a>
+      <a href="{{ '/#process' | relative_url }}">Process</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    </div>
+    <a class="nav-cta" href="mailto:info@asagreed.au">Book a call</a>
+  </nav>
+</header>
+
+{{ content }}
+
+<footer class="wrap">
+  <span>&copy; {{ site.time | date: "%Y" }} As Agreed Group</span>
+  <span>Gold Coast, Australia (from Feb 2027)</span>
+</footer>
+
+</body>
+</html>
