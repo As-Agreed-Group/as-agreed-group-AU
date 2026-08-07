@@ -330,6 +330,8 @@ footer {
   flex-wrap: wrap;
   gap: 10px;
 }
+footer a { text-decoration: none; transition: color 0.15s ease; }
+footer a:hover { color: var(--ink); }
 
 /* ---------- BLOG: LISTING ---------- */
 .blog-hero {
