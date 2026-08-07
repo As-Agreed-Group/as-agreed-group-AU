@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
 <link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
 
@@ -40,7 +41,9 @@
 
 <header>
   <nav class="wrap">
-    <a class="logo" href="{{ '/' | relative_url }}">As Agreed<span class="dot">.</span></a>
+    <a class="logo" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/logo-mark.png' | relative_url }}" alt="As Agreed" class="logo-mark">
+    </a>
     <div class="navlinks">
       <a href="{{ '/#services' | relative_url }}">Services</a>
       <a href="{{ '/#process' | relative_url }}">Process</a>
