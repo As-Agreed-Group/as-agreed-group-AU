@@ -2,7 +2,6 @@
 layout: post
 title: "Why your startup needs an operations partner, not just a bookkeeper"
 date: 2026-08-07
-published: false
 description: >-
   A bookkeeper keeps your numbers straight. An operations partner runs the
   whole back office and tells you where the business is leaking time and
@@ -15,13 +14,13 @@ The usual fix is to hire a bookkeeper. It's a sensible first move, and a good bo
 
 ## What a bookkeeper actually covers
 
-A bookkeeper keeps your accounts straight. Reconciliations, invoicing, accounts payable and receivable, BAS prep, making sure Xero doesn't turn into a horror show come tax time. That's genuinely important work, and no founder should try to skip it.
+A bookkeeper keeps your accounts straight. Reconciliations, invoicing, accounts payable and receivable, BAS prep, making sure Xero or MYOB doesn't turn into a horror show come tax time. That's genuinely important work, and no founder should try to skip it.
 
 But it's narrow by design. A bookkeeper isn't answering your emails, managing your calendar, onboarding your first hire, or telling you that your pricing structure doesn't add up. That's not a criticism of bookkeepers, it's just not the job.
 
 ## What changes with an operations partner
 
-An operations partner picks up everything else. Inbox management, scheduling, document handling, onboarding support, light project coordination, plus the financial admin a bookkeeper handles too. It's the whole back office, not just the ledger.
+An operations partner picks up everything else. Inbox management, document handling, onboarding support, light project coordination, IT support, plus the financial admin a bookkeeper handles too. It's the whole back office, not just the ledger.
 
 The bigger shift is what happens above the admin line. A good operations partner isn't just executing tasks, they're looking at how your business actually runs and telling you where it's leaking time or money. Is your process holding you back? Is there a supplier costing you more than it should? Are you spending founder hours on something that should have been delegated three months ago?
 
@@ -35,6 +34,8 @@ Hiring full-time isn't the answer either, not at 6 to 24 months in. Most early-s
 
 ## Where As Agreed fits in
 
-This is exactly the gap we built As Agreed to close. We're a virtual back office for founder-led businesses on the Gold Coast, covering bookkeeping, payroll, IT support and administration under one fixed scope and one fixed monthly price. One point of contact, not four separate vendors to manage.
+This is exactly the gap we built As Agreed to close. We're the behind-the-scenes team for founder-led businesses on the Gold Coast, handling outsourced administration and business advisory together, not as separate add-ons. One partner focused on the financial side, one focused on advisory and process, working as your operations function without the overhead of hiring one.
 
-It's the work behind the work, agreed upfront and delivered without the scope creep.
+No jargon, no fluff, just practical support from people who've run businesses themselves.
+
+That's the work behind the work.
